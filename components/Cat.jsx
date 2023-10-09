@@ -13,7 +13,7 @@ const Cat = ({name,thirst,hunger}) => {
     } else {
         hugeryStatus = "hungry!"
     }
-    return <Text>Hello, I'm <Text style={{color:"blue"}}>{name}</Text> and I'm {hugeryStatus}     голод:{hunger} жажда:{thirst}</Text>
+    return <Text>Hello, I'm <Text style={{color:"blue"}}>{name}</Text> and I'm {hugeryStatus}</Text>
 };
 
 export default Cat
