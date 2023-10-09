@@ -1,19 +1,16 @@
-import React from 'react';
-import {Text} from 'react-native';
+import React, { useState } from 'react';
+import {Text, Button} from 'react-native';
 
-const Cat = ({name,thirst,hunger}) => {
+const Cat = ({name, isHungry}) => {
 
-    let hugeryStatus = ""
-    if (hunger >= 0.5) {
-        if (thirst >= 0.5) {
-            hugeryStatus = "full!"
-        } else {
-            hugeryStatus = "hungry!"
-        }
-    } else {
-        hugeryStatus = "hungry!"
-    }
-    return <Text>Hello, I'm <Text style={{color:"blue"}}>{name}</Text> and I'm {hugeryStatus}     голод:{hunger} жажда:{thirst}</Text>
+    let [status, setStatus] = useState(isHungry ? 'hungry' : 'full')
+
+    return (
+        <>
+            <Text>Hello, I'm {name} and I'm {status}</Text>
+            <Button onPress={() => setStatus('full')} title='Feed cat!'/>
+        </>
+    )
 };
 
 export default Cat

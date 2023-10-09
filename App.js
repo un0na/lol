@@ -1,13 +1,17 @@
 import { Text, View, StatusBar } from 'react-native';
 import Cat from './components/Cat'
+import Hamster from './components/Hamster'
 
 const App = () => {
   return (
     <View>
       <Text>Catcafe:</Text>
-      <Cat name="Vasya" hunger={0.5} thirst={0.5} />
-      <Cat name="Fedya" hunger={0.4} thirst={0.6} />
-      <Cat name="Masha" hunger={0.6} thirst={0.4} />
+      <Cat name="Vasya" isHungry />
+      <Cat name="Fedya" isHungry />
+      <Cat name="Masha" isHungry />
+      <Hamster name="Sanya" isHungry color="green" />
+      <Hamster name="Petya" isHungry color="red" />
+      <Hamster name="Gosha" isHungry color="blue" />
       <StatusBar hidden></StatusBar>
     </View>
   )
